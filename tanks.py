@@ -115,7 +115,7 @@ def tankShot (targetBox, obstacleBox, x0, y0, v, theta, g = 9.8):
     """
     x,y = trajectory(x0,y0,v,theta,g = 9.8, npts = 1000)
     plt.plot(x,y)
-    if obstacleBox in x,y:
+    if obstacleBox in np.array(x,y):
         x,y = endTrajectoryAtIntersection(x,y,box)
         plt.plot(x,y)
     if firstInBox (x,y,targetBox) >= 0:
